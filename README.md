@@ -13,13 +13,13 @@ Two data sources were used to complement restaurant data with tourism and econom
 
 ## Key Findings
 
-- Strong Positive Correlation ($r = 0.76$): There is a powerful link between tourist arrivals and review volume; as a city's "fame" grows, its digital footprint follows.
-- The "58% Rule" ($R^2 = 0.58$): Over half (58%) of a city's total restaurant reviews are driven strictly by the volume of tourist arrivals.
-- The "99% Certainty" on Price: ANOVA testing confirmed that Cost of Living is a statistically significant predictor of restaurant prices ($p = 0.0025$).
-- The "Standard" Meal: Most European hubs maintain a consistent price level between 2.1 and 2.3, regardless of local economic differences.
-- London vs. Paris: London acts as the "Digital King" with significantly higher engagement rates per tourist than Paris (The "Volume Anchor").
-- The "Refined Trend": Excluding the outlier Paris increases the correlation to $r = 0.79$, showing that global "Mega-Hubs" follow slightly different rules than mid-sized capitals.
-- The "Value Hub" Hack: Cities like Lisbon and Athens offer the highest "engagement-to-price" ratio, maintaining lower costs despite high global popularity.
+- **Strong Positive Correlation ($r = 0.76$)**: There is a powerful link between tourist arrivals and review volume; as a city's "fame" grows, its digital footprint follows.
+- **The "58% Rule" ($R^2 = 0.58$)**: Over half (58%) of a city's total restaurant reviews are driven strictly by the volume of tourist arrivals.
+- **The "99% Certainty" on Price**: ANOVA testing confirmed that Cost of Living is a statistically significant predictor of restaurant prices ($p = 0.0025$).
+- **The "Standard" Meal**: Most European hubs maintain a consistent price level between 2.1 and 2.3, regardless of local economic differences.
+- **London vs. Paris**: London acts as the "Digital King" with significantly higher engagement rates per tourist than Paris (The "Volume Anchor").
+- **The "Refined Trend"**: Excluding the outlier Paris increases the correlation to $r = 0.79$, showing that global "Mega-Hubs" follow slightly different rules than mid-sized capitals.
+- **The "Value Hub" Hack**: Cities like Lisbon and Athens offer the highest "engagement-to-price" ratio, maintaining lower costs despite high global popularity.
 
 ## Database Schema
 
