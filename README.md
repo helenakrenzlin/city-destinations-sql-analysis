@@ -9,12 +9,17 @@ Two data sources were used to complement restaurant data with tourism and econom
 ## Research Hypothesis
 
 1. **Cities with higher annual tourist arrivals tend to have more reviews.**
-2. **Capital cities typically feature restaurants with higher average TripAdvisor ratings.**
-3. **Cities with a higher cost of living generally have restaurants with higher price levels.**
+2. **Cities with a higher cost of living generally have restaurants with higher price levels.**
 
 ## Key Findings
 
-- TO COMPLETE
+- Strong Positive Correlation ($r = 0.76$): There is a powerful link between tourist arrivals and review volume; as a city's "fame" grows, its digital footprint follows.
+- The "58% Rule" ($R^2 = 0.58$): Over half (58%) of a city's total restaurant reviews are driven strictly by the volume of tourist arrivals.
+- The "99% Certainty" on Price: ANOVA testing confirmed that Cost of Living is a statistically significant predictor of restaurant prices ($p = 0.0025$).
+- The "Standard" Meal: Most European hubs maintain a consistent price level between 2.1 and 2.3, regardless of local economic differences.
+- London vs. Paris: London acts as the "Digital King" with significantly higher engagement rates per tourist than Paris (The "Volume Anchor").
+- The "Refined Trend": Excluding the outlier Paris increases the correlation to $r = 0.79$, showing that global "Mega-Hubs" follow slightly different rules than mid-sized capitals.
+- The "Value Hub" Hack: Cities like Lisbon and Athens offer the highest "engagement-to-price" ratio, maintaining lower costs despite high global popularity.
 
 ## Database Schema
 
@@ -30,25 +35,26 @@ The datasets were merged using city names.
 ## Project Structure
 
 ```
-sql_mini_project/
-├── README.md
-├── data-processing.ipynb          # ETL: load, clean, normalize, export CSVs
-├── main.ipynb                     # Report: load query results, visualize findings
-├── sql-scripts/
-│   ├── create-schema.sql          # MySQL DDL (CREATE DATABASE, CREATE TABLE)
-│   └── queries.sql                
+city_destinations-sql-analysis/
+├── README.md                      # Project summary, insights & visual recap
+├── data_processing.ipynb          # ETL: Cleaning city data & handling encoding (BOM)
+├── main_analysis.ipynb            # Report: ANOVA tests, regression & final visualizations
+├── sql_scripts/                   # Database Architecture
+│   ├── create_schema.sql          # MySQL DDL (Cities, City_Data, Restaurants tables)
+│   └── analytical_queries.sql     # Queries for tourism volume & price correlations
 ├── data/
-│   ├── raw/
-│   │   └── TA_restaurants_curated.csv    # Kaggle dataset (125528 rows)
-│   │   └── destinations.csv    # Kaggle dataset (210 rows)
-│   ├── processed/
-│   │   ├── cities.csv       # Lookup table: city id and name
-│   │   ├── city_data.csv               # Lookup table: city id, annual tourists and cost of living
-│   │   └── restaurants.csv         # Main table with foreign keys (125528 rows)
-│   └── query-results/
-│       ├── 1. xxx TO FILL OUT
-
-
+│   ├── raw/                       # Original untouched datasets
+│   │   └── european_cities_raw.csv
+│   ├── processed/                 # Cleaned CSVs ready for SQL import
+│   │   ├── cities_normalized.csv
+│   │   ├── cost_of_living_tiers.csv
+│   │   └── restaurant_stats.csv
+│   └── query_results/             # CSV exports from SQL for deep-dive analysis
+│       ├── 1_tourism_review_correlation.csv    # Basis for Hypothesis 1
+│       ├── 2_refined_correlation_no_outliers.csv # Analysis excluding Paris
+│       ├── 3_top_5_tourism_hubs.csv            # Volume vs. Engagement leaders
+│       ├── 4_price_range_by_cost_of_living.csv # Data for ANOVA testing
+│       └── 5_top_10_expensive_cities.csv       # Ranking by Avg Restaurant Price
 ```
 
 ## How to Reproduce
