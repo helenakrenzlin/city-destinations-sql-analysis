@@ -1,6 +1,6 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-git add# How Tourism Shapes Dining: Insights from European Cities 
+# How Tourism Shapes Dining: Insights from European Cities 
 ## Mini Project - SQL: From Data to Insight
 
 Two data sources were used to complement restaurant data with tourism and economic insights. The data was normalized into a relational MySQL database, and analytical SQL queries were run, with findings visualized in a Jupyter Notebook report.
